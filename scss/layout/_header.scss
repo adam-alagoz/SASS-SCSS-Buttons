@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.header {
+  width: 100%;
+  padding: map-get(v.$spacing, lg);
+  background-color: map-get(map-get(v.$colors, primary), 500);
+  color: #fff;
+  text-align: center;
+  @include m.theme-transition;
+
+  h1 {
+    font-size: map-get(v.$font-sizes, 2xl);
+    margin: 0;
+  }
+
+  @include m.respond(tablet) {
+    h1 {
+      font-size: map-get(v.$font-sizes, 3xl);
+    }
+  }
+}
+
+body.dark .header {
+  background-color: map-get(map-get(v.$colors, primary), 700);
+}

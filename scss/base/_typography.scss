@@ -1,0 +1,37 @@
+@use "../abstracts/variables" as v;
+
+body {
+  font-family: v.$font-stack;
+  font-size: map-get(v.$font-sizes, base);
+  line-height: map-get(v.$line-heights, normal);
+  font-weight: map-get(v.$font-weights, normal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: map-get(v.$font-weights, semibold);
+  line-height: map-get(v.$line-heights, tight);
+}
+
+h1 {
+  font-size: map-get(v.$font-sizes, 3xl);
+}
+h2 {
+  font-size: map-get(v.$font-sizes, 2xl);
+}
+h3 {
+  font-size: map-get(v.$font-sizes, xl);
+}
+h4 {
+  font-size: map-get(v.$font-sizes, lg);
+}
+h5 {
+  font-size: map-get(v.$font-sizes, base);
+}
+h6 {
+  font-size: map-get(v.$font-sizes, sm);
+}

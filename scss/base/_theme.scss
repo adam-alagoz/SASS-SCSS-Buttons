@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+body {
+  background-color: map-get(v.$light-theme, bg-primary);
+  color: map-get(v.$light-theme, text-primary);
+  @include m.theme-transition;
+}
+
+body.dark {
+  background-color: map-get(v.$dark-theme, bg-primary);
+  color: map-get(v.$dark-theme, text-primary);
+
+  .button-container,
+  .button-circle {
+    border-color: map-get(v.$dark-theme, border);
+    background-color: map-get(v.$dark-theme, bg-secondary);
+  }
+
+  .theme-toggle {
+    background: map-get(map-get(v.$colors, primary), 400);
+  }
+}

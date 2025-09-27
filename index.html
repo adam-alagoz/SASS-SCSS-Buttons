@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button States</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <h1>Button Showcase</h1>
+    </header>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle">Dark 🌙</button>
+
+    <!-- Main Wrapper -->
+    <main class="wrapper">
+      <!-- Rectangular Buttons-->
+      <section class="button-container">
+        <h2>Rectangular Buttons</h2>
+        <button class="btn-default">Default Button</button>
+        <button class="btn-disabled">&lt; Disabled Button &gt;</button>
+        <button class="btn-focus">&lt; Focus Button &gt;</button>
+        <button class="btn-hover-transform">Hover Button</button>
+        <h5 class="headtitle">Cannot be pushed down!</h5>
+        <p class="content">
+          The content below the buttons is not pushed down due to the buttons’
+          transform style.
+        </p>
+      </section>
+
+      <!-- Rectangular Buttons -->
+      <section class="button-container">
+        <h2>Rectangular Buttons</h2>
+        <button class="btn-default">Default Button</button>
+        <button class="btn-disabled">&lt; Disabled Button &gt;</button>
+        <button class="btn-focus">&lt; Focus Button &gt;</button>
+        <button class="btn-hover-margin">Hover Button</button>
+        <h5 class="headtitle">Can be pushed down</h5>
+        <p class="content">
+          The content below the buttons is pushed down due to the buttons’
+          margin change on hover.
+        </p>
+      </section>
+
+      <!-- Circle Buttons -->
+      <section class="button-circle">
+        <h2>Circle Buttons</h2>
+        <button class="btn-default">+</button>
+        <button class="btn-disabled">+</button>
+        <button class="btn-focus">+</button>
+        <button class="btn-hover-transform">+</button>
+        <h5 class="headtitle">Cannot be pushed down!</h5>
+        <p class="content">
+          The content below the buttons is not pushed down due to the buttons’
+          transform style.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 SCSS Showcase. All rights reserved. Adem Alagoz</p>
+    </footer>
+
+    <!-- Theme toggle JS -->
+    <script>
+      const btn = document.querySelector(".theme-toggle");
+      btn?.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        btn.textContent = document.body.classList.contains("dark")
+          ? "☀️"
+          : "🌙";
+      });
+    </script>
+  </body>
+</html>

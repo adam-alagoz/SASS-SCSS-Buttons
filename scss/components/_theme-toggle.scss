@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  cursor: pointer;
+  background: map-get(map-get(v.$colors, primary), 500);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  z-index: 1000;
+  @include m.theme-transition;
+
+  @media (max-width: 480px) {
+    top: 10px;
+    right: 10px;
+    padding: 8px;
+    font-size: 0.9rem;
+    border-radius: 50%;
+  }
+}

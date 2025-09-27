@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.footer {
+  width: 100%;
+  padding: map-get(v.$spacing, md);
+  background-color: map-get(v.$light-theme, bg-secondary);
+  color: map-get(v.$light-theme, text-secondary);
+  text-align: center;
+  font-size: map-get(v.$font-sizes, sm);
+  border-top: 1px solid map-get(v.$light-theme, border);
+  @include m.theme-transition;
+
+  @include m.respond(tablet) {
+    font-size: map-get(v.$font-sizes, base);
+  }
+}
+
+body.dark .footer {
+  background-color: map-get(v.$dark-theme, bg-secondary);
+  color: map-get(v.$dark-theme, text-secondary);
+  border-top: 1px solid map-get(v.$dark-theme, border);
+}

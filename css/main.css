@@ -1,0 +1,230 @@
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #111827;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+body.dark {
+  background-color: #111827;
+  color: #f9fafb;
+}
+body.dark .button-container,
+body.dark .button-circle {
+  border-color: #4b5563;
+  background-color: #1f2937;
+}
+body.dark .theme-toggle {
+  background: #2dd4bf;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.header {
+  width: 100%;
+  padding: 24px;
+  background-color: #14b8a6;
+  color: #fff;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+.header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 28px;
+  }
+}
+
+body.dark .header {
+  background-color: #0f766e;
+}
+
+.footer {
+  width: 100%;
+  padding: 16px;
+  background-color: #fff;
+  color: #4b5563;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #e5e7eb;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+@media (min-width: 768px) {
+  .footer {
+    font-size: 16px;
+  }
+}
+
+body.dark .footer {
+  background-color: #1f2937;
+  color: #9ca3af;
+  border-top: 1px solid #4b5563;
+}
+
+.button-container,
+.button-circle {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  border: 2px dashed #e5e7eb;
+  background-color: #fff;
+  padding: 24px;
+  width: 260px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+.button-container button,
+.button-circle button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button-container button.btn-default,
+.button-circle button.btn-default {
+  background-color: #14b8a6;
+  color: #fff;
+  border-color: #14b8a6;
+}
+.button-container button.btn-hover-transform,
+.button-circle button.btn-hover-transform {
+  background-color: transparent;
+  color: #14b8a6;
+  border-color: #14b8a6;
+}
+.button-container button.btn-hover-transform:hover,
+.button-circle button.btn-hover-transform:hover {
+  background-color: #14b8a6;
+  color: #fff;
+  transform: rotate(20deg) scale(1.1);
+}
+.button-container button.btn-hover-margin,
+.button-circle button.btn-hover-margin {
+  background-color: transparent;
+  color: #14b8a6;
+  border-color: #14b8a6;
+}
+.button-container button.btn-hover-margin:hover,
+.button-circle button.btn-hover-margin:hover {
+  background-color: #14b8a6;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.button-container button.btn-focus:focus,
+.button-circle button.btn-focus:focus {
+  outline: none;
+  background-color: #0f766e;
+  border-color: #0f766e;
+  color: #fff;
+}
+.button-container button.btn-disabled,
+.button-circle button.btn-disabled {
+  background-color: #f3f4f6;
+  border-color: #f3f4f6;
+  color: #6b7280;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.button-container button,
+.button-circle button {
+  width: 100%;
+  height: 50px;
+}
+
+.button-circle button {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+@media (min-width: 768px) {
+  .button-circle button {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  cursor: pointer;
+  background: #14b8a6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+@media (max-width: 480px) {
+  .theme-toggle {
+    top: 10px;
+    right: 10px;
+    padding: 8px;
+    font-size: 0.9rem;
+    border-radius: 50%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

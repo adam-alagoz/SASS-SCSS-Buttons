@@ -1,0 +1,97 @@
+// COLORS
+$colors: (
+  primary: (
+    50: #f0fdfa,
+    100: #ccfbf1,
+    200: #99f6e4,
+    300: #5eead4,
+    400: #2dd4bf,
+    500: #14b8a6,
+    600: #0d9488,
+    700: #0f766e,
+    800: #115e59,
+    900: #134e4a,
+  ),
+  gray: (
+    50: #f9fafb,
+    100: #f3f4f6,
+    200: #e5e7eb,
+    300: #d1d5db,
+    400: #9ca3af,
+    500: #6b7280,
+    600: #4b5563,
+    700: #374151,
+    800: #1f2937,
+    900: #111827,
+  ),
+);
+
+// THEMES
+$light-theme: (
+  bg-primary: map-get(map-get($colors, gray), 50),
+  bg-secondary: #fff,
+  text-primary: map-get(map-get($colors, gray), 900),
+  text-secondary: map-get(map-get($colors, gray), 600),
+  border: map-get(map-get($colors, gray), 200),
+);
+
+$dark-theme: (
+  bg-primary: map-get(map-get($colors, gray), 900),
+  bg-secondary: map-get(map-get($colors, gray), 800),
+  text-primary: map-get(map-get($colors, gray), 50),
+  text-secondary: map-get(map-get($colors, gray), 400),
+  border: map-get(map-get($colors, gray), 600),
+);
+
+// SPACING
+$spacing: (
+  xs: 4px,
+  sm: 8px,
+  md: 16px,
+  lg: 24px,
+  xl: 32px,
+  2xl: 48px,
+);
+
+// TYPOGRAPHY
+$font-stack: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  sans-serif;
+
+$font-sizes: (
+  sm: 14px,
+  base: 16px,
+  lg: 18px,
+  xl: 20px,
+  2xl: 24px,
+  3xl: 28px,
+);
+
+$font-weights: (
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+);
+
+$line-heights: (
+  tight: 1.2,
+  normal: 1.5,
+  loose: 1.75,
+);
+
+$heading-size: map-get($font-sizes, lg);
+
+// BREAKPOINTS
+$breakpoints: (
+  tablet: 768px,
+  desktop: 1440px,
+);
+
+// CONTAINERS
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);

@@ -1,0 +1,16 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: map-get(v.$spacing, xl);
+  align-items: center;
+
+  @include m.respond(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
